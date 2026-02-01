@@ -1,16 +1,13 @@
-// main.c (OpenMP) - Suma Paralela de Arreglos (versión limpia y presentable)
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <omp.h>
 
-// ========= Personaliza aquí =========
 static const char *STUDENT_NAME  = "Victor Eduardo Perez Aguilar";
 static const char *STUDENT_ID    = "A01796394";
 static const char *STUDENT_EMAIL = "A01796394@tec.mx";
-// ===================================
 
-// Colores ANSI (macOS OK)
+// Colores
 #define C_RESET   "\x1b[0m"
 #define C_BOLD    "\x1b[1m"
 #define C_DIM     "\x1b[2m"
@@ -111,7 +108,7 @@ static double sum_parallel(const int *A, const int *B, int *C, int n) {
 int main(void) {
     banner();
 
-    // Parámetros (defaults razonables para que el paralelo tenga chance)
+    // Parámetros con default
     int N       = read_int("Ingresa N (tamanio del arreglo)", 10000000, 10, 100000000);
     int MAXVAL  = read_int("Ingresa MAXVAL (valores 0..MAXVAL-1)", 100, 2, 1000000);
     int PRINT_K = read_int("Cuantos elementos imprimir (K)", 10, 0, 200);
